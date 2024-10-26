@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="{{ url_for('pages.create_post') }}"><h1>Incepe un party!</h1></a>
+
+{% for post in party %}
+    <article class="card md-5" style="width: 18rem;">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href=" {{ url_for('pages.party_post', post_id=post.id) }}">{{ post.title }}</a>
+                <br>
+                <small class="text-muted">Utilizator: {{ post.user.username }}</small>
+                <br>
+                <small class="text-muted">Student la: {{ post.user.college }} </small>
+                <br>
+                <small class="text-muted">Data: {{ post.date_posted.strftime('%X %d-%m-%Y') }}</small>
+                <br>
+                <small class="text-muted">Participanti: {{post.participants|count}} </small>
+
+                
+            </div>
+        </div>
+    </article>
+{% endfor %}
+
+{% endblock %}
