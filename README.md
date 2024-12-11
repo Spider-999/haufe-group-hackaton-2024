@@ -1,5 +1,5 @@
 # haufe-group-hackaton-2024
-Student party website made for the 2024 haufe group hackathon
+Student party website made for the 2024 6 hours haufe group hackathon
 
 ## About
 Student party website
